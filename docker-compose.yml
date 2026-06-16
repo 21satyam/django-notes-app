@@ -21,7 +21,7 @@ services:
       - .env
     depends_on:
       db:
-        condition: db
+        condition: service_healthy
     restart: unless-stopped
     healthcheck:
       test: ["CMD-SHELL", "curl -f http://localhost:8000/admin || exit 1"]
