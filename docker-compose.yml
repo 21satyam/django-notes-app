@@ -39,6 +39,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: test_db
+      MYSQL_USER: django_user
+      MYSQL_PASSWORD: django_pass 
     volumes:
       - mysql_data:/var/lib/mysql
     healthcheck:
